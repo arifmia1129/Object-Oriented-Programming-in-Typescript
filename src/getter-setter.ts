@@ -17,6 +17,14 @@ class BankAccount {
     console.log(`Your current account balance is ${this._balacne}`);
   }
 
+  private get testBalance(): number {
+    return this._balacne;
+  }
+
+  get test(): number {
+    return this.testBalance;
+  }
+
   addDeposit(amount: number) {
     this._balacne = this._balacne + amount;
   }
